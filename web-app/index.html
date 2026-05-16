@@ -533,51 +533,42 @@
                     <h2 class="hero-title">Learn Python the Fun Way!</h2>
                     <p class="hero-subtitle">25+ Mini Projects • Beautiful UI • Beginner Friendly • Zero Dependencies</p>
 
-                    <div class="hero-features">
-                        <div class="feature-badge">
+                    <div class="hero-features" role="tablist" aria-label="Project categories">
+                        <button class="feature-badge tab active" data-category="all"
+                                role="tab" aria-selected="true" tabindex="0">
+                            <span class="feature-icon">🌟</span>
+                            <span class="feature-label">All Projects</span>
+                        </button>
+                        <button class="feature-badge tab" data-category="games"
+                                role="tab" aria-selected="false" tabindex="-1">
                             <span class="feature-icon">🎮</span>
                             <span class="feature-label">Games</span>
-                        </div>
-                        <div class="feature-badge">
+                        </button>
+                        <button class="feature-badge tab" data-category="math"
+                                role="tab" aria-selected="false" tabindex="-1">
                             <span class="feature-icon">🔢</span>
                             <span class="feature-label">Math</span>
-                        </div>
-                        <div class="feature-badge">
+                        </button>
+                        <button class="feature-badge tab" data-category="utilities"
+                                role="tab" aria-selected="false" tabindex="-1">
                             <span class="feature-icon">🔐</span>
                             <span class="feature-label">Utilities</span>
-                        </div>
-                    </div>
-
-                    <button class="btn-explore" id="exploreBtn" aria-label="Explore all projects">
-                        Explore Projects →
-                    </button>
-                </div>
-            </div>
-        </section>
-
-        <!-- Search & Category Tabs -->
-        <section class="tabs-section" aria-label="Search and Project categories">
-            <div class="container">
-                <div class="tabs-wrapper">
-                    <div class="tabs" role="tablist" aria-label="Project categories">
-                        <button class="tab active" data-category="all" role="tab" aria-selected="true" tabindex="0">🌟
-                            All Projects</button>
-                        <button class="tab" data-category="games" role="tab" aria-selected="false" tabindex="-1">🎮
-                            Games</button>
-                        <button class="tab" data-category="math" role="tab" aria-selected="false" tabindex="-1">🔢
-                            Math</button>
-                        <button class="tab" data-category="utilities" role="tab" aria-selected="false" tabindex="-1">🔐
-                            Utilities</button>
+                        </button>
                         <!--
                             PLAYGROUND TAB
                             data-category="playground" is detected by main.js
                             and delegates to window.playgroundAPI instead of
                             running applyCategoryFilter().
                         -->
-                        <button class="tab" data-category="playground" id="playgroundTab" role="tab"
-                            aria-selected="false" tabindex="-1">🐍 Playground</button>
+                        <button class="feature-badge tab" data-category="playground" id="playgroundTab"
+                                role="tab" aria-selected="false" tabindex="-1">
+                            <span class="feature-icon">🐍</span>
+                            <span class="feature-label">Playground</span>
+                        </button>
                     </div>
-                    <button class="btn-random-project" id="randomProjectBtn" title="Discover a random project!">
+
+                    <button class="btn-random-project" id="randomProjectBtn"
+                            title="Discover a random project!">
                         <i class="fas fa-dice"></i> Random Project 🎲
                     </button>
                 </div>
